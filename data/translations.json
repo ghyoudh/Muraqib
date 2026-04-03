@@ -1,0 +1,96 @@
+{
+  "en": {
+    "headers": {
+      "activity_name": "Activity Name",
+      "expected_start_date": "Expected Start Date",
+      "contractor_name": "Contractor Name",
+      "complexity_level": "Complexity Level"
+    },
+    "complexity": {
+      "Low": "Low",
+      "Medium": "Medium",
+      "High": "High"
+    },
+    "activities": {
+      "صب الخرسانة المسلحة للقواعد": "Reinforced concrete casting for foundations",
+      "أعمال الحفر والردم": "Excavation and backfilling works",
+      "أعمال اللاندسكيب والتشجير": "Landscape and afforestation works",
+      "تأسيس السباكة والكهرباء": "Plumbing and electrical foundation",
+      "اللياسة الخارجية": "External plastering",
+      "تركيب البلاط والرخام": "Tile and marble installation",
+      "صب الخرسانة العادية للأساسات": "Plain concrete casting for foundations",
+      "أعمال الدهانات الأولية": "Primary painting works",
+      "عزل القواعد والرقاب": "Foundation and neck insulation",
+      "صب سقف الدور الأرضي": "Ground floor ceiling casting",
+      "صب أعمدة الدور الأرضي": "Ground floor columns casting",
+      "بناء جدران القبو": "Basement walls construction",
+      "أعمال المباني (الطوب)": "Masonry works (brick)",
+      "تركيب النوافذ والأبواب": "Windows and doors installation",
+      "تركيب الأدوات الصحية": "Sanitary ware installation",
+      "أعمال العزل المائي للأسطح": "Roof waterproofing works",
+      "اللياسة الداخلية": "Internal plastering",
+      "الدهانات النهائية": "Final paints"
+    },
+    "contractors": {
+      "شركة دريك آند سكل": "Drake & Scull Company",
+      "شركة الفوزان للتجارة والمقاولات": "Al Fawzan Trading and Contracting Company",
+      "مجموعة بن لادن السعودية": "Saudi Binladin Group",
+      "شركة شابورجي بالونجي": "Shapoorji Pallonji Company",
+      "شركة السيف للمقاولات الهندسية": "El Seif Engineering Contracting",
+      "شركة الخضري للمقاولات": "Al Khodari Contracting Company",
+      "شركة المباني": "Almabani Company",
+      "شركة المقاولون العرب": "Arab Contractors Company",
+      "شركة راشد الراشد": "Rashed Al Rashed Company",
+      "شركة جرير للمقاولات": "Jarir Contracting Company",
+      "شركة نسما للمقاولات": "Nesma Contracting Company",
+      "مؤسسة بن سمار للمقاولات": "Bin Sammar Contracting Establishment"
+    }
+  },
+  "ar": {
+    "headers": {
+      "activity_name": "اسم النشاط",
+      "expected_start_date": "تاريخ البدء المتوقع",
+      "contractor_name": "اسم المقاول",
+      "complexity_level": "مستوى التعقيد"
+    },
+    "complexity": {
+      "Low": "منخفض",
+      "Medium": "متوسط",
+      "High": "عالي"
+    },
+    "activities": {
+      "Reinforced concrete casting for foundations": "صب الخرسانة المسلحة للقواعد",
+      "Excavation and backfilling works": "أعمال الحفر والردم",
+      "Landscape and afforestation works": "أعمال اللاندسكيب والتشجير",
+      "Plumbing and electrical foundation": "تأسيس السباكة والكهرباء",
+      "External plastering": "اللياسة الخارجية",
+      "Tile and marble installation": "تركيب البلاط والرخام",
+      "Plain concrete casting for foundations": "صب الخرسانة العادية للأساسات",
+      "Primary painting works": "أعمال الدهانات الأولية",
+      "Foundation and neck insulation": "عزل القواعد والرقاب",
+      "Ground floor ceiling casting": "صب سقف الدور الأرضي",
+      "Ground floor columns casting": "صب أعمدة الدور الأرضي",
+      "Basement walls construction": "بناء جدران القبو",
+      "Masonry works (brick)": "أعمال المباني (الطوب)",
+      "Windows and doors installation": "تركيب النوافذ والأبواب",
+      "Sanitary ware installation": "تركيب الأدوات الصحية",
+      "Roof waterproofing works": "أعمال العزل المائي للأسطح",
+      "Internal plastering": "اللياسة الداخلية",
+      "Final paints": "الدهانات النهائية"
+    },
+    "contractors": {
+      "Drake & Scull Company": "شركة دريك آند سكل",
+      "Al Fawzan Trading and Contracting Company": "شركة الفوزان للتجارة والمقاولات",
+      "Saudi Binladin Group": "مجموعة بن لادن السعودية",
+      "Shapoorji Pallonji Company": "شركة شابورجي بالونجي",
+      "El Seif Engineering Contracting": "شركة السيف للمقاولات الهندسية",
+      "Al Khodari Contracting Company": "شركة الخضري للمقاولات",
+      "Almabani Company": "شركة المباني",
+      "Arab Contractors Company": "شركة المقاولون العرب",
+      "Rashed Al Rashed Company": "شركة راشد الراشد",
+      "Jarir Contracting Company": "شركة جرير للمقاولات",
+      "Nesma Contracting Company": "شركة نسما للمقاولات",
+      "Bin Sammar Contracting Establishment": "مؤسسة بن سمار للمقاولات"
+    }
+  }
+}

@@ -13,16 +13,27 @@ _WEATHER_MAP = {"Low": 0, "Medium": 1, "High": 2}
 _RNG_SEED = 42
 
 
-def _derive_delay(row) -> int:
-    """Business-rule delay label derived from enriched features."""
-    delayed = False
+def _derive_delay(row, rng) -> int:
+    score = 0.0
+
+    # كل قاعدة تضيف احتمال وليس قرار قاطع
     if row["complexity_enc"] == 2 and row["supply_delay_days"] > 10:
-        delayed = True
+        score += 0.45
+
     if row["subcontractor_performance"] < 5:
-        delayed = True
+        score += 0.40
+
     if row["weather_enc"] == 2 and row["labor_availability"] < 70:
-        delayed = True
-    return int(delayed)
+        score += 0.30
+
+    # عوامل إضافية بأثر أصغر
+    score += (row["supply_delay_days"] / 30) * 0.15
+    score += (1 - row["labor_availability"] / 100) * 0.10
+
+    # noise عشوائي يكسر الحتمية
+    score += rng.uniform(-0.20, 0.20)
+
+    return int(score >= 0.50)
 
 
 def load_data() -> pd.DataFrame:
@@ -32,6 +43,9 @@ def load_data() -> pd.DataFrame:
     # Drop any trailing empty rows
     df.dropna(how="all", inplace=True)
     df.reset_index(drop=True, inplace=True)
+
+    # Standardize column names to remove underscores if present for compatibility
+    df.columns = [c.replace("_", " ") for c in df.columns]
 
     rng = np.random.default_rng(_RNG_SEED)
     n = len(df)
@@ -47,7 +61,7 @@ def load_data() -> pd.DataFrame:
     df["weather_enc"] = df["weather_risk"].map(_WEATHER_MAP).fillna(0).astype(int)
 
     # Target label
-    df["is_delayed"] = df.apply(_derive_delay, axis=1)
+    df["is_delayed"] = df.apply(lambda row: _derive_delay(row, rng), axis=1)
 
     # Parse start date
     df["Expected Start Date"] = pd.to_datetime(df["Expected Start Date"])

@@ -18,7 +18,12 @@ def _train(df: pd.DataFrame) -> RandomForestClassifier:
         X, y, test_size=0.2, random_state=42
     )
 
-    clf = RandomForestClassifier(n_estimators=100, random_state=42, max_depth=6)
+    clf = RandomForestClassifier(n_estimators=100,
+                                min_samples_split=20, 
+                                min_samples_leaf=15,
+                                random_state=42, 
+                                max_depth=8,
+                                class_weight='balanced')
     clf.fit(X_train, y_train)
 
     acc = accuracy_score(y_test, clf.predict(X_test))

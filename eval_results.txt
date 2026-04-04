@@ -1,0 +1,47 @@
+MURAQIB MODEL EVALUATION REPORT (BALANCED v8)
+===========================================
+
+1. DATASET OVERVIEW
+-------------------
+• Total Samples: 1500
+• Data Logic: Stochastic scoring with noise (v2)
+• Class Distribution:
+  - Delayed: 515 samples (34.33%)
+  - On-Time: 985 samples (65.67%)
+
+2. MODEL CONFIGURATION
+----------------------
+• Algorithm  : Random Forest Classifier
+• Parameters : n_estimators=100, max_depth=8, min_samples_split=20, min_samples_leaf=15
+• Weights    : Balanced (Penalty for missing minority class)
+
+3. PERFORMANCE METRICS (TEST SET - 300 Samples)
+-----------------------------------------------
+• Accuracy:  82.67%
+• Precision: 67.35%
+• Recall:    96.12% (Exceptional sensitivity to delays)
+• F1 Score:  79.20%
+• ROC-AUC:   95.87%
+
+4. 5-FOLD CROSS-VALIDATION
+--------------------------
+• Mean Accuracy: 82.13% (± 1.05%)
+• Mean Recall:   91.26% (Confirming high reliability in risk detection)
+• Mean ROC-AUC:  92.77%
+
+5. KEY RISK FACTORS (FEATURE IMPORTANCE)
+----------------------------------------
+1. Subcontractor Performance : 44.52%
+2. Complexity Level          : 26.46%
+3. Supply Delay Days         : 17.24%
+4. Labor Availability        :  7.15%
+5. Weather Risk              :  4.63%
+
+6. CONCLUSION
+-------------
+• Training Accuracy: 84.08%
+• Testing Accuracy:  82.67%
+• Gap:                1.42%
+
+Summary:
+The addition of 'balanced' class weights has significantly shifted the model behavior. While the overall accuracy dropped slightly compared to v7, the Recall has surged to 96%, meaning the model is now highly specialized in catching potential delays. This "sensitive" configuration is often preferred in construction risk monitoring where missing a delay is more costly than a false alarm.
